@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# Raw and processed telemetry data (real machine data, not for publication)
+01_Collecte/data/
+02_Merge_data/data/
+03_Nettoyage/data/
+04_Pretraitement_Model/data/
+
+# Compiled agent binary
+*.exe

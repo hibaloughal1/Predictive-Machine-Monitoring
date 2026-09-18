@@ -1,0 +1,3 @@
+horizon_minutes,target_role,total_rows,valid_rows,invalid_rows_near_segment_ends,positive_rows,negative_rows,positive_percentage,machines_with_positive_labels,total_machines,runs_with_positive_labels,total_runs
+5,main_target,153521,133016,20505,50467,82549,37.9405,4,4,45,67
+10,comparison_only,153521,120719,32802,53658,67061,44.4487,4,4,39,67

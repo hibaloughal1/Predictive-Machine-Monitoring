@@ -1,0 +1,5 @@
+machine_id,total_rows,rule_a_two_moderate_groups_positive_rows,rule_a_two_moderate_groups_positive_percentage,rule_b_cpu_and_ram_positive_rows,rule_b_cpu_and_ram_positive_percentage,rule_c_severe_or_two_moderate_positive_rows,rule_c_severe_or_two_moderate_positive_percentage
+0890dcc046c079acc4de4202,35713,150,0.42,0,0.0,2773,7.7647
+7232bc533c21ce408d45d473,26191,408,1.5578,0,0.0,3832,14.631
+a0f8c86097e55fbfa506d057,66528,13679,20.5613,12766,19.1889,15444,23.2143
+d588df123ac0d0ce20b112ac,25089,64,0.2551,0,0.0,15297,60.9709
