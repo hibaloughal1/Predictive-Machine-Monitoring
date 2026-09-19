@@ -1,15 +1,15 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-title AdoptAI Dashboard
+title Predictive Machine Monitoring Dashboard
 echo.
 echo ========================================
-echo          Starting AdoptAI Dashboard
+echo   Starting Predictive Machine Monitoring
 echo ========================================
 echo.
 echo The browser will open after the server is ready.
 echo Address: http://127.0.0.1:8765
-echo Keep this window open while using AdoptAI.
+echo Keep this window open while using the dashboard.
 echo.
 if exist ".venv\Scripts\python.exe" (
   ".venv\Scripts\python.exe" 12_run_dashboard.py %*
@@ -22,10 +22,10 @@ if exist ".venv\Scripts\python.exe" (
   )
   python 12_run_dashboard.py %*
 )
-set "ADOPTAI_EXIT=%ERRORLEVEL%"
-if not "%ADOPTAI_EXIT%"=="0" (
+set "PREDICTIVE_MACHINE_EXIT=%ERRORLEVEL%"
+if not "%PREDICTIVE_MACHINE_EXIT%"=="0" (
   echo.
-  echo AdoptAI stopped with exit code %ADOPTAI_EXIT%.
+  echo Dashboard stopped with exit code %PREDICTIVE_MACHINE_EXIT%.
   pause
 )
-exit /b %ADOPTAI_EXIT%
+exit /b %PREDICTIVE_MACHINE_EXIT%

@@ -1,4 +1,4 @@
-# AdoptAI — Prétraitement et Modélisation
+# Predictive Machine Monitoring — Prétraitement et Modélisation
 
 Ce dossier contient les notebooks et scripts utilisés pour préparer les données, créer le label de ralentissement, construire les variables de prédiction, entraîner les modèles et lancer le dashboard.
 

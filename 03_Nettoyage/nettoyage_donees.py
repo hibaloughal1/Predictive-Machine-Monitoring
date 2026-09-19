@@ -3,7 +3,7 @@
 export_clean_metrics.py
 -----------------------
 Nettoie la table `system_metrics` de metrics.db et exporte le résultat
-en CSV pour la couche ML d'AdoptAI.
+en CSV pour la couche ML du pipeline.
 
 La base SQLite est ouverte explicitement en lecture seule.
 Toutes les transformations sont réalisées en mémoire.

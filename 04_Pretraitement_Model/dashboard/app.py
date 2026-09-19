@@ -8,7 +8,7 @@ from dashboard.runtime import Monitor,comparison
 STATIC=Path(__file__).parent/"static"; monitor=Monitor()
 @asynccontextmanager
 async def lifespan(app): monitor.start(); yield; monitor.stop()
-app=FastAPI(title="AdoptAI Dashboard",version="2.0",lifespan=lifespan); app.mount("/assets",StaticFiles(directory=STATIC),name="assets")
+app=FastAPI(title="Predictive Machine Monitoring Dashboard",version="2.0",lifespan=lifespan); app.mount("/assets",StaticFiles(directory=STATIC),name="assets")
 @app.get("/",include_in_schema=False)
 def home(): return FileResponse(STATIC/"index.html")
 @app.get("/api/live")

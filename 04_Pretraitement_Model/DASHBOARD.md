@@ -1,4 +1,4 @@
-# AdoptAI Dashboard v2
+# Predictive Machine Monitoring Dashboard v2
 
 Start by double-clicking `RUN_DASHBOARD.bat`, or run:
 

@@ -164,7 +164,7 @@ class AlertEngine:
         rank={"low":0,"elevated":1,"high":2}; upward=rank.get(level,0)>rank.get(self.last_level,0); cooled=time.monotonic()-self.last_at>=self.cooldown
         alert=None
         if level in ("elevated","high") and (upward or cooled):
-            pct=round(prob*100); alert={"severity":level,"probability":prob,"title":"High slowdown risk" if level=="high" else "Elevated slowdown risk","message":f"AdoptAI estimates a {pct}% chance of slowdown within five minutes."}; self.last_at=time.monotonic()
+            pct=round(prob*100); alert={"severity":level,"probability":prob,"title":"High slowdown risk" if level=="high" else "Elevated slowdown risk","message":f"Predictive Machine Monitoring estimates a {pct}% chance of slowdown within five minutes."}; self.last_at=time.monotonic()
         if level in rank: self.last_level=level
         return alert
 
@@ -175,7 +175,7 @@ class Monitor:
     def running(self): return bool(self._thread and self._thread.is_alive() and not self._stop.is_set())
     def start(self):
         if self.running:return False
-        self._stop.clear(); self.run_id=str(uuid.uuid4()); self.count=0; self.error=None; self.started_at=now_utc(); self.features=Features(self.interval); self.alerts=AlertEngine(); self._thread=threading.Thread(target=self._run,daemon=True,name="adoptai-monitor"); self._thread.start(); return True
+        self._stop.clear(); self.run_id=str(uuid.uuid4()); self.count=0; self.error=None; self.started_at=now_utc(); self.features=Features(self.interval); self.alerts=AlertEngine(); self._thread=threading.Thread(target=self._run,daemon=True,name="predictive-machine-monitor"); self._thread.start(); return True
     def stop(self):
         if not self.running:return False
         self._stop.set(); self._thread.join(timeout=6); return True

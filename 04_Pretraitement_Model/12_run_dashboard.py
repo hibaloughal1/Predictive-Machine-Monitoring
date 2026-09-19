@@ -23,7 +23,7 @@ def open_when_ready(url: str) -> None:
 def main():
     p=argparse.ArgumentParser();p.add_argument("--host",default="127.0.0.1");p.add_argument("--port",type=int,default=8765);p.add_argument("--no-browser",action="store_true");a=p.parse_args()
     url=f"http://{a.host}:{a.port}"
-    print(f"Starting AdoptAI at {url}")
+    print(f"Starting Predictive Machine Monitoring at {url}")
     print("Keep this window open. Press Ctrl+C to stop the dashboard.")
     if not a.no_browser:
         Thread(target=open_when_ready,args=(url,),daemon=True).start()
